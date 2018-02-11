@@ -1,21 +1,22 @@
-let last_known_scroll_position = 0;
-let ticking = false;
+import common from './common';
+import gallery from './gallery';
 
-function shrinkHeader(scrollPos) {
-    if (scrollPos > 150) {
-        document.querySelector(".nav-container").classList.add('shrink');
-    } else {
-        document.querySelector(".nav-container").classList.remove('shrink');
-    }
-}
+const PAGES = {
+    common: common,
+    gallery: gallery,
+};
 
-window.addEventListener('scroll', function (e) {
-    last_known_scroll_position = window.scrollY;
-    if (!ticking) {
-        window.requestAnimationFrame(function () {
-            shrinkHeader(last_known_scroll_position);
-            ticking = false;
-        });
-        ticking = true;
+const UTIL = {
+    fire(func) {
+        if (func !== '' && typeof(PAGES[func]) === 'function') {
+            PAGES[func]();
+        }
+    },
+    initPage() {
+        const bodyId = document.body.id;
+        UTIL.fire('common');
+        UTIL.fire(bodyId);
     }
-});
+};
+
+UTIL.initPage();

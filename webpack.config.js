@@ -17,6 +17,11 @@ const config = {
     module: {
         rules: [
             { test: /\.js$/, include: APP_DIR, use: 'babel-loader' },
+            {
+                test: /\.css$/,
+                use: [ 'style-loader', 'css-loader' ]
+            },
+            { test: /\.(png|jpg|gif|svg)/, use: 'file-loader' },
         ],
     },
     plugins: [
