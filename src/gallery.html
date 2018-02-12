@@ -6,238 +6,48 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <style>
-        head, body {
-            font-size: 16px;
-            color: #fff;
-            background-color: #2e1e1f;
-            margin: 0;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        @media (max-width: 650px) {
-            html, body {
-                font-size: 14px;
-            }
-        }
-
-        .header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-image: url(http://larustica.sa/wp-content/uploads/2015/07/slider_bg_2.jpg);
-            background-repeat: no-repeat;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .nav-container {
-            display: flex;
-            height: 100px;
-            padding: 0 10px;
-            transition: all 0.4s;
-            background-color: #1c1010;
-        }
-
-        /* for top navbar only, exclude footer */
-        .header > .nav-container {
-            background-color: transparent;
-        }
-
-        .nav-container.shrink {
-            height: 50px;
-            background-color: #1c1010 !important;
-        }
-
-        .nav-bar {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .nav-bar > .logo {
-            flex: 0;
-            height: 100%;
-            width: auto;
-        }
-
-        .nav-ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            font-size: 1.125rem;
-            color: #fff;
-        }
-
-        .nav-ul > li {
-            display: inline-block;
-            padding: 4px 15px;
-            margin: 0 5px;
-        }
-
-        .nav-ul > li.active {
-            color: #ff9c00
-        }
-
-        .oven-image {
-            background-image: url(http://larustica.sa/wp-content/uploads/2015/07/Oven_new_4.jpg);
-            background-repeat: no-repeat;
-            height: 400px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .footer.nav-container {
-            height: auto;
-        }
-
-        .footer.nav-container > .nav-bar > .nav-ul {
-            margin-bottom: 10px;
-        }
-
-        .footer.nav-container > .nav-bar > .logo {
-            height: 100px;
-        }
-
-        @media (max-width: 650px) {
-            .nav-bar {
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            .nav-ul > li {
-                padding: 4px 6px;
-            }
-        }
-
-        /******************************************************************************************/
-        /* Reset box sizing */
-        html {
-            box-sizing: border-box;
-        }
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        .pacifico {
-            font-family: 'Pacifico', cursive;
-        }
-
-        .flex-center {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .fixed-top{
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-        }
-
-
-        .font-xl{
-            font-size: 2.5rem;
-        }
-
-        .font-lg{
-            font-size: 2rem;
-        }
-
-        .font-xs{
-            font-size: .75rem;
-        }
-
-        .orange{
-            color: #ff9c00
-        }
-
-        .dark-gray{
-            color: #363636;
-        }
-
-        .white-bg{
-            background-color: #fff;
-        }
-
-        .parallax{
-            background-attachment: fixed;
-        }
-
-        /*@media (max-device-width: 650px) {*/
-        /*.parallax {*/
-        /*background-attachment: scroll;*/
-        /*}*/
-        /*}*/
-
-        @media (max-width: 650px) {
-            .hide-sm {
-                display: none;
-            }
-        }
-
-        /******************************************************************************************/
-
-    </style>
+    <link href="assets/css/app.css" rel="stylesheet">
 </head>
 <body id="gallery">
-
-<div class="header parallax">
-    <div class="nav-container fixed-top">
-        <div class="nav-bar">
-            <img class="logo hide-sm" src="http://larustica.sa/wp-content/uploads/2015/07/logo-trans.png"
-                 alt="La Rustica">
-            <ul class="nav-ul pacifico">
-                <li class="active">Home</li>
-                <li>Gallery</li>
-                <li>Book</li>
-                <li>Contact</li>
-                <li>About</li>
-            </ul>
-        </div>
+<div class="nav-container fixed-top">
+    <div class="nav-bar">
+        <img class="logo hide-sm" src="http://larustica.sa/wp-content/uploads/2015/07/logo-trans.png"
+             alt="La Rustica">
+        <ul class="nav-ul pacifico">
+            <li><a href="/index.html">Home</a></li>
+            <li class="active"><a href="/gallery.html">Gallery</a></li>
+            <li>Book</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
     </div>
-    <div class="orange font-xl pacifico">Italian Pizzeria</div>
-    <div class="font-lg pacifico">Always Fresh</div>
+</div>
+<div class="header gallery parallax">
+    <div class="header-overlay"></div>
+    <div class="ps-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl" data-size="1024x1024">
+                <img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+        </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
+                <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+        </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
+                <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+        </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
+                <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
+            </a>
+        </figure>
+    </div>
 </div>
 
-
-
-<div class="ps-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl" data-size="1024x1024">
-            <img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image description" />
-        </a>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
-            <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
-        </a>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
-            <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
-        </a>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
-            <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
-        </a>
-    </figure>
-
-
-</div>
 
 
 <div class="flex-center font-xs">
