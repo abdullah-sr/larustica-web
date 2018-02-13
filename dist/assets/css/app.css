@@ -199,7 +199,7 @@ html {
 /*}*/
 /*}*/
 
-@media (max-width: 1000px) {
+@media (max-width: 650px) {
     .hide-sm {
         display: none;
     }
@@ -229,7 +229,7 @@ html {
     object-fit: cover;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .ps-gallery {
         margin-top: 80px;
     }
