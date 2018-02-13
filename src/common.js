@@ -3,7 +3,7 @@ export default function() {
     let ticking = false;
 
     function shrinkHeader(scrollPos) {
-        if (scrollPos > 150) {
+        if (scrollPos > 50) {
             document.querySelector(".nav-container").classList.add('shrink');
         } else {
             document.querySelector(".nav-container").classList.remove('shrink');
