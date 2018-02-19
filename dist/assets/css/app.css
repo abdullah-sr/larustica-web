@@ -70,7 +70,7 @@ head, body {
     margin: 0 auto;
 }
 
-.nav-bar > .logo {
+.nav-bar .logo {
     flex: 0;
     height: 100%;
     width: auto;
@@ -82,6 +82,35 @@ head, body {
     padding: 0;
     font-size: 1.125rem;
     color: #fff;
+}
+
+.nav-ul.collapse {
+    width: 300px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.95);
+    top: 50px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    left: -300px;
+    padding: 15px;
+    transition: 0.4s;
+}
+
+.nav-ul.expand {
+    left: 0;
+}
+
+.toggle-nav {
+    font-size: 1.75rem;
+    padding: 5px;
+    display: none;
+}
+
+@media (max-width: 905px) {
+    .toggle-nav {
+        display: inline-block;
+    }
 }
 
 .nav-ul > li {
@@ -126,7 +155,7 @@ head, body {
 }
 
 @media (max-width: 650px) {
-    .nav-bar {
+    .footer .nav-bar {
         flex-direction: column;
         justify-content: center;
     }
@@ -141,6 +170,7 @@ head, body {
 html {
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -157,39 +187,38 @@ html {
     padding: 20px;
 }
 
-.fixed-top{
+.fixed-top {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
 }
 
-
-.font-xl{
+.font-xl {
     font-size: 2.5rem;
 }
 
-.font-lg{
+.font-lg {
     font-size: 2rem;
 }
 
-.font-xs{
+.font-xs {
     font-size: .75rem;
 }
 
-.orange{
+.orange {
     color: #ff9c00
 }
 
-.dark-gray{
+.dark-gray {
     color: #363636;
 }
 
-.white-bg{
+.white-bg {
     background-color: #fff;
 }
 
-.parallax{
+.parallax {
     background-attachment: fixed;
 }
 
@@ -209,7 +238,7 @@ html {
 
 /********************************** Gallery ****************************************/
 
-.ps-gallery{
+.ps-gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -217,13 +246,13 @@ html {
     z-index: 5;
 }
 
-.ps-gallery > figure{
+.ps-gallery > figure {
     height: 180px;
     width: 180px;
     margin: 10px;
 }
 
-.ps-gallery > figure img{
+.ps-gallery > figure img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -238,6 +267,7 @@ html {
 .bttn-default {
     color: #fff;
 }
+
 .bttn-primary,
 .bttn,
 .bttn-lg,
@@ -246,18 +276,23 @@ html {
 .bttn-xs {
     color: #1d89ff;
 }
+
 .bttn-warning {
     color: #feab3a;
 }
+
 .bttn-danger {
     color: #ff5964;
 }
+
 .bttn-success {
     color: #28b78d;
 }
+
 .bttn-royal {
     color: #bd2df5;
 }
+
 .bttn,
 .bttn-lg,
 .bttn-md,
@@ -272,26 +307,31 @@ html {
     cursor: pointer;
     position: relative;
 }
+
 .bttn-lg {
     padding: 8px 15px;
     font-size: 24px;
     font-family: inherit;
 }
+
 .bttn-md {
     font-size: 20px;
     font-family: inherit;
     padding: 5px 12px;
 }
+
 .bttn-sm {
     padding: 4px 10px;
     font-size: 16px;
     font-family: inherit;
 }
+
 .bttn-xs {
     padding: 3px 8px;
     font-size: 12px;
     font-family: inherit;
 }
+
 .bttn-simple {
     margin: 0;
     border-width: 0;
@@ -304,50 +344,61 @@ html {
     padding: 5px 12px;
     overflow: hidden;
     border-radius: 4px;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
     color: #fff;
     -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
     transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
+
 .bttn-simple.bttn-warning:hover,
 .bttn-simple.bttn-warning:focus {
     background-color: #feb54f;
 }
+
 .bttn-simple.bttn-xs {
     padding: 3px 8px;
     font-size: 12px;
     font-family: inherit;
 }
+
 .bttn-simple.bttn-sm {
     padding: 4px 10px;
     font-size: 16px;
     font-family: inherit;
 }
+
 .bttn-simple.bttn-md {
     font-size: 20px;
     font-family: inherit;
     padding: 5px 12px;
 }
+
 .bttn-simple.bttn-lg {
     padding: 8px 15px;
     font-size: 24px;
     font-family: inherit;
 }
+
 .bttn-simple.bttn-default {
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
 }
+
 .bttn-simple.bttn-primary {
     background: #1d89ff;
 }
+
 .bttn-simple.bttn-warning {
     background: #feab3a;
 }
+
 .bttn-simple.bttn-danger {
     background: #ff5964;
 }
+
 .bttn-simple.bttn-success {
     background: #28b78d;
 }
+
 .bttn-simple.bttn-royal {
     background: #bd2df5;
 }
