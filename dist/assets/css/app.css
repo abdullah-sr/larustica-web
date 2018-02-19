@@ -105,9 +105,10 @@ head, body {
     font-size: 1.75rem;
     padding: 5px;
     display: none;
+    cursor: pointer;
 }
 
-@media (max-width: 905px) {
+@media (max-width: 995px) {
     .toggle-nav {
         display: inline-block;
     }

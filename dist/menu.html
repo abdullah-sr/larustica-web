@@ -8,39 +8,39 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link href="assets/css/app.css" rel="stylesheet">
 </head>
-<body id="<%= htmlWebpackPlugin.options.page %>">
+<body id="menu">
 <div class="nav-container fixed-top">
     <div class="nav-bar">
         <a class="logo" href="/"><img class="logo" src="http://larustica.sa/wp-content/uploads/2015/07/logo-trans.png"
              alt="La Rustica"></a>
         <ul class="nav-ul">
             <li
-            <% if (htmlWebpackPlugin.options.filename == 'index.html') { %> class="active" <% } %> >
+             >
             <a href="/index.html">Home</a>
             </li>
             <li
-            <% if (htmlWebpackPlugin.options.filename == 'gallery.html') { %> class="active" <% } %> >
+             >
             <a href="/gallery.html">Gallery</a>
             </li>
             <li><a target="_blank" href="http://book.larustica.sa">Book</a></li>
             <li
-            <% if (htmlWebpackPlugin.options.filename == 'menu.html') { %> class="active" <% } %> >
+             class="active"  >
             <a href="/menu.html">Menu</a>
             </li>
             <li
-            <% if (htmlWebpackPlugin.options.filename == 'story.html') { %> class="active" <% } %> >
+             >
             <a href="/story.html">Story</a>
             </li>
             <li
-            <% if (htmlWebpackPlugin.options.filename == 'larustica-ape.html') { %> class="active" <% } %> >
+             >
             <a href="/larustica-ape.html">LA Rustica Ape</a>
             </li>
             <li
-            <% if (htmlWebpackPlugin.options.filename == 'sapori.html') { %> class="active" <% } %> >
+             >
             <a href="/sapori.html">Sapori</a>
             </li>
             <li
-            <% if (htmlWebpackPlugin.options.filename == 'contact.html') { %> class="active" <% } %> >
+             >
             <a target="_blank" href="mailto:email@larustica.sa">Contact</a>
             </li>
         </ul>
@@ -48,7 +48,10 @@
     </div>
 </div>
 
-<%= require(`html-loader!./${htmlWebpackPlugin.options.filename}`) %>
+<div class="main-content home parallax">
+    <button class="bttn-simple bttn-md bttn-warning" style="margin-top: 18px">Download Menu</button>
+</div>
+
 
 <div class="flex-center font-xs">
     Sunday – 5:00pm – 11:30pm<br>
@@ -71,5 +74,5 @@
         </ul>
     </div>
 </div>
-</body>
+<script type="text/javascript" src="app.js?637c87a8b07913486dd0"></script></body>
 </html>

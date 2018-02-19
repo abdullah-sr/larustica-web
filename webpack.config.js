@@ -43,6 +43,18 @@ const config = {
             page: 'gallery',
             hash: true,
         }),
+        new HtmlWebpackPlugin({
+            template: `${APP_DIR}/base.html`,
+            filename: 'menu.html',
+            page: 'menu',
+            hash: true,
+        }),
+        new HtmlWebpackPlugin({
+            template: `${APP_DIR}/base.html`,
+            filename: 'story.html',
+            page: 'story',
+            hash: true,
+        }),
         new UglifyJsPlugin(),
     ],
 };

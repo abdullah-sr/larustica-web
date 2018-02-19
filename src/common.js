@@ -1,6 +1,6 @@
 export default function () {
 
-    if(window.innerWidth <= 905) {
+    if(window.innerWidth <= 995) {
         document.querySelector(".nav-container").classList.add('shrink');
         document.querySelector(".nav-ul").classList.add('collapse');
     }
@@ -9,7 +9,7 @@ export default function () {
     let ticking = false;
 
     function shrinkHeader(scrollPos) {
-        if(window.innerWidth <= 905) return;
+        if(window.innerWidth <= 995) return;
         if (scrollPos > 50) {
             document.querySelector(".nav-container").classList.add('shrink');
         } else {
@@ -80,7 +80,7 @@ export default function () {
 
 
     optimizedResize.add(function () {
-        if(window.innerWidth <= 905) {
+        if(window.innerWidth <= 995) {
             document.querySelector(".nav-container").classList.add('shrink');
             document.querySelector(".nav-ul").classList.add('collapse');
         } else {
